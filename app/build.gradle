@@ -1,0 +1,41 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 27
+    buildToolsVersion "27.0.3"
+
+    defaultConfig {
+        applicationId "com.android.deskclock"
+        minSdkVersion 19
+        targetSdkVersion 19
+        vectorDrawables.useSupportLibrary = true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+
+ext {
+    supportLibVersion = '27.0.0'
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:27.0.0'
+    implementation 'com.android.support:design:27.0.0'
+    implementation 'com.android.support:percent:27.0.0'
+    implementation 'com.android.support:transition:27.0.0'
+    implementation 'com.android.support:support-compat:27.0.0'
+    implementation 'com.android.support:support-media-compat:27.0.0'
+    implementation 'com.android.support:support-v13:27.0.0'
+    implementation 'com.android.support:recyclerview-v7:27.0.0'
+    implementation 'com.android.support:preference-v14:27.0.0'
+    implementation 'com.android.support:preference-v7:27.0.0'
+    implementation 'com.android.support:gridlayout-v7:27.0.0'
+
+
+}
